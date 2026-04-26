@@ -4,9 +4,10 @@ import { GoogleGenAI } from '@google/genai';
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'AIzaSyCjPZySJrukjHkJ3YAK33ad7Dor-9anVF8' });
 
 export async function POST(request: Request) {
-  try {
-    const { username, repos, question, history, isResume } = await request.json();
+  const body = await request.json();
+  const { username, repos, question, history, isResume } = body;
 
+  try {
     if (!question) {
       return NextResponse.json({ error: 'Question is required' }, { status: 400 });
     }
