@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'AIzaSyCjPZySJrukjHkJ3YAK33ad7Dor-9anVF8' });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY as string });
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
