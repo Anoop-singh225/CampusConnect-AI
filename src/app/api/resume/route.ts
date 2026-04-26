@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   }
 
   try {
-    const headers = process.env.GITHUB_TOKEN ? { Authorization: `token ${process.env.GITHUB_TOKEN}` } : {};
+    const headers: HeadersInit = process.env.GITHUB_TOKEN ? { Authorization: `token ${process.env.GITHUB_TOKEN}` } : {};
     
     // Fetch top repos
     const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=stars&per_page=5`, { headers });
