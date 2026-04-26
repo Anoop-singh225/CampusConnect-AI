@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'AIzaSyCjPZySJrukjHkJ3YAK33ad7Dor-9anVF8' });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY as string });
 
 export async function POST(request: Request) {
   try {
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
 
     if (isQuotaError) {
       return NextResponse.json({ 
-        resume: "ATS RESUME (DEMO FALLBACK)\n\nName: Anoop Singh\nEmail: contact@example.com\n\nExperience:\n- Lead Developer at NextMatrix Tech\n- Spearheaded AI-driven campus program management\n- Developed cross-platform IoT solutions\n\nProjects:\n- CampusConnect (AI Platform)\n- Llama-3.1 Reasoning Trainer\n\nEducation:\n- B.Tech in Computer Science\n\n(Note: This is a demo fallback due to AI rate limits. AI will resume once quota resets.)" 
+        resume: "ATS RESUME (DEMO FALLBACK)\n\nName: Anoop Singh\nEmail: sanoop6027@gmail.com\n\nExperience:\n- Lead Developer at NextMatrix Tech\n- Spearheaded AI-driven campus program management\n- Developed cross-platform IoT solutions\n\nProjects:\n- CampusConnect (AI Platform)\n- Llama-3.1 Reasoning Trainer\n\nEducation:\n- B.Tech in Computer Science\n\n(Note: This is a demo fallback due to AI rate limits. AI will resume once quota resets.)" 
       });
     }
 
