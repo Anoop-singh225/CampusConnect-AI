@@ -2,7 +2,12 @@
 
 > **Revolutionizing Campus Ambassador Programs with Automated AI Verification & GitHub Insights.**
 
-CampusConnect is an end-to-end management platform designed to replace fragmented spreadsheets and WhatsApp groups with a centralized, gamified system. It features an innovative **GitHub Profile Evaluator** that provides recruiter-level insights for student developers in seconds.
+CampusConnect AI is an end-to-end management platform designed to replace fragmented spreadsheets and WhatsApp groups with a centralized, gamified system. It features an innovative **GitHub Profile Evaluator** that provides recruiter-level insights for student developers in seconds.
+
+## 📺 Video Demo
+> **Watch the full platform walkthrough here:** [Link to Demo Video (Coming Soon)]
+
+---
 
 ---
 
